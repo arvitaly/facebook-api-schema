@@ -9,9 +9,15 @@ export const Grab = ({ url = URL, grabModel = GrabModel }) => async (name: strin
         description: sel("h1+p", html()),
         readingPermissions: sel("#readperms + ul > li", [html()]),
         fields: sel("#fields + div > table > tbody > tr", [{
-            name: sel("td > p", html()),
+            name: sel("td > p code", text()),
             description: sel("td+td > p", html()),
-            type: sel("td+td+td > p", html()),
+            type: sel("td+td+td > p", {
+                scalar: sel("code", text()),
+                object: sel("a ", {
+                    link: attr("href"),
+                    title: sel("code", text()),
+                }),
+            }),
         }]),
         edges: sel("#edges + div > table > tbody", [{
             name: sel("td > p > a", {
@@ -41,9 +47,20 @@ export const GetNode = ({ grabRaw = grab }) => async (name: string) => {
             }
             return {
                 link: URLLib.resolve(url, edge.name.href),
-                title: (edge.description || " ").substr(1),
+                title: edge.description || "",
             };
         }) : [],
+        readingFields: raw.fields ? raw.fields.map((rawField) => ({
+            name: rawField.name || "",
+            description: rawField.description ? parseDescription(rawField.description) : "",
+            type: rawField.type ? {
+                scalar: rawField.type.scalar,
+                object: rawField.type.object ? {
+                    link: URLLib.resolve(url, rawField.type.object.link),
+                    title: rawField.type.object.title,
+                } : null,
+            } : null,
+        })) : [],
         readingPermissions: raw.readingPermissions ? raw.readingPermissions.map((p) => parseDescription(p)) : [],
     };
 };

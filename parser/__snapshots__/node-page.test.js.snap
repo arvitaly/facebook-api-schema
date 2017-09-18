@@ -6,7 +6,90 @@ Object {
   "edges": Array [
     Object {
       "link": "https://developers.facebook.com/docs/graph-api/reference/object/comments/",
-      "title": "omments on the achievement story.",
+      "title": "Comments on the achievement story.",
+    },
+  ],
+  "readingFields": Array [
+    Object {
+      "description": "ID of this particular achievement.",
+      "name": "id",
+      "type": Object {
+        "object": null,
+        "scalar": "string",
+      },
+    },
+    Object {
+      "description": "The user who achieved this.",
+      "name": "from",
+      "type": Object {
+        "object": Object {
+          "link": "https://developers.facebook.com/docs/graph-api/reference/user/",
+          "title": "User",
+        },
+        "scalar": "User",
+      },
+    },
+    Object {
+      "description": "Time at which this was achieved.",
+      "name": "publish_time",
+      "type": Object {
+        "object": null,
+        "scalar": "datetime",
+      },
+    },
+    Object {
+      "description": "The app in which the user achieved this.",
+      "name": "application",
+      "type": Object {
+        "object": Object {
+          "link": "https://developers.facebook.com/docs/graph-api/reference/app/",
+          "title": "App",
+        },
+        "scalar": "App",
+      },
+    },
+    Object {
+      "description": "Information about the achievement type this instance is connected with.",
+      "name": "data",
+      "type": Object {
+        "object": null,
+        "scalar": "object",
+      },
+    },
+    Object {
+      "description": "The achievement type that the user achieved.",
+      "name": "achievement",
+      "type": Object {
+        "object": Object {
+          "link": "https://developers.facebook.com/docs/graph-api/reference/achievement_type/",
+          "title": "AchievementType",
+        },
+        "scalar": "AchievementType",
+      },
+    },
+    Object {
+      "description": "A weighting given to each achievement type by the app.",
+      "name": "importance",
+      "type": Object {
+        "object": null,
+        "scalar": "int",
+      },
+    },
+    Object {
+      "description": "Always game.achievement.",
+      "name": "type",
+      "type": Object {
+        "object": null,
+        "scalar": "string",
+      },
+    },
+    Object {
+      "description": "Indicates whether gaining the achievement published a feed story for the user.",
+      "name": "no_feed_story",
+      "type": Object {
+        "object": null,
+        "scalar": "boolean",
+      },
     },
   ],
   "readingPermissions": Array [
@@ -33,48 +116,84 @@ Object {
     "fields": Array [
       Object {
         "description": "ID of this particular achievement.",
-        "name": "<code>id</code>",
-        "type": "<code>string</code>",
+        "name": "id",
+        "type": Object {
+          "object": null,
+          "scalar": "string",
+        },
       },
       Object {
         "description": "The user who achieved this.",
-        "name": "<code>from</code>",
-        "type": "<a href=\\"/docs/graph-api/reference/user/\\"><code>User</code></a>",
+        "name": "from",
+        "type": Object {
+          "object": Object {
+            "link": "/docs/graph-api/reference/user/",
+            "title": "User",
+          },
+          "scalar": "User",
+        },
       },
       Object {
         "description": "Time at which this was achieved.",
-        "name": "<code>publish_time</code>",
-        "type": "<code>datetime</code>",
+        "name": "publish_time",
+        "type": Object {
+          "object": null,
+          "scalar": "datetime",
+        },
       },
       Object {
         "description": "The app in which the user achieved this.",
-        "name": "<code>application</code>",
-        "type": "<a href=\\"/docs/graph-api/reference/app/\\"><code>App</code></a>",
+        "name": "application",
+        "type": Object {
+          "object": Object {
+            "link": "/docs/graph-api/reference/app/",
+            "title": "App",
+          },
+          "scalar": "App",
+        },
       },
       Object {
         "description": "Information about the achievement type this instance is connected with.",
-        "name": "<code>data</code>",
-        "type": "<code>object</code>",
+        "name": "data",
+        "type": Object {
+          "object": null,
+          "scalar": "object",
+        },
       },
       Object {
         "description": "The achievement type that the user achieved.",
-        "name": "<code>achievement</code>",
-        "type": "<a href=\\"/docs/graph-api/reference/achievement_type/\\"><code>AchievementType</code></a>",
+        "name": "achievement",
+        "type": Object {
+          "object": Object {
+            "link": "/docs/graph-api/reference/achievement_type/",
+            "title": "AchievementType",
+          },
+          "scalar": "AchievementType",
+        },
       },
       Object {
         "description": "A weighting given to each achievement type by the app.",
-        "name": "<code>importance</code>",
-        "type": "<code>int</code>",
+        "name": "importance",
+        "type": Object {
+          "object": null,
+          "scalar": "int",
+        },
       },
       Object {
         "description": "Always <code>game.achievement</code>.",
-        "name": "<code>type</code>",
-        "type": "<code>string</code>",
+        "name": "type",
+        "type": Object {
+          "object": null,
+          "scalar": "string",
+        },
       },
       Object {
         "description": "Indicates whether gaining the achievement published a feed story for the user.",
-        "name": "<code>no_feed_story</code>",
-        "type": "<code>boolean</code>",
+        "name": "no_feed_story",
+        "type": Object {
+          "object": null,
+          "scalar": "boolean",
+        },
       },
     ],
     "readingPermissions": Array [
@@ -83,6 +202,6 @@ Object {
       "A user access token with <code>user_games_activity</code> permission, for any achievements that person has made in any app. ",
     ],
   },
-  "url": "https://developers.facebook.com/docs/graph-api/reference/v2.10/achivement",
+  "url": "https://developers.facebook.com/docs/graph-api/reference/v2.10/achievement",
 }
 `;

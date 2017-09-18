@@ -5,9 +5,9 @@ beforeAll(async () => start());
 afterAll(async () => stop());
 it("grab from real html", async () => {
     expect(
-        await grabNodePage({})("achivement"),
+        await grabNodePage({})("achievement"),
     ).toMatchSnapshot();
 });
 it("get node", async () => {
-    expect(await getNode("achivement")).toMatchSnapshot();
+    expect(await getNode("achievement")).toMatchSnapshot();
 });

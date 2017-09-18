@@ -24,7 +24,7 @@ exports.Grab = ({ url = exports.URL, grab = webgrab_1.default }) => () => __awai
     return raw;
 });
 exports.grabRaw = exports.Grab({});
-exports.getList = ({ grab = exports.Grab({}) }) => () => __awaiter(this, void 0, void 0, function* () {
+exports.GetNodeList = ({ grab = exports.Grab({}) }) => () => __awaiter(this, void 0, void 0, function* () {
     const raw = yield grab();
     if (!raw) {
         throw new Error("Not found raw info");
@@ -45,4 +45,4 @@ exports.getList = ({ grab = exports.Grab({}) }) => () => __awaiter(this, void 0,
         };
     });
 });
-exports.default = exports.getList({});
+exports.default = exports.GetNodeList({});

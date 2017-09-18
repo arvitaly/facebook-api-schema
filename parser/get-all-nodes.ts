@@ -1,6 +1,8 @@
-import getNodeList from "./node-list";
-import getNode from "./node-page";
-export const getAllNodes = () => async () => {
+import GetNodeList from "./node-list";
+import GetNode from "./node-page";
+export const GetAllNodes = ({ getNode = GetNode, getNodeList = GetNodeList }) => async () => {
     const nodes = await getNodeList();
-    nodes.map(()=> getNode() )
+    return await Promise.all(nodes.map(async (n) => ({ ...n, data: await getNode(n.name) })));
 };
+
+export default GetAllNodes({});

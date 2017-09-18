@@ -14,7 +14,7 @@ export const Grab = ({ url = URL, grab = GrabModel }) => async () => {
     return raw;
 };
 export const grabRaw = Grab({});
-export const getList = ({ grab = Grab({}) }) => async () => {
+export const GetNodeList = ({ grab = Grab({}) }) => async () => {
     const raw = await grab();
     if (!raw) {
         throw new Error("Not found raw info");
@@ -35,4 +35,4 @@ export const getList = ({ grab = Grab({}) }) => async () => {
         };
     });
 };
-export default getList({});
+export default GetNodeList({});

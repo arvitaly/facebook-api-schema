@@ -1,0 +1,123 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`get all nodes 1`] = `
+Array [
+  Object {
+    "data": Object {
+      "description": "Represents a user gaining an achievement in a Facebook game. Not to be confused with an /docs/graph-api/reference/achievement_type/,achievement type.",
+      "edges": Array [
+        Object {
+          "link": "https://developers.facebook.com/docs/graph-api/reference/object/comments/",
+          "title": "Comments on the achievement story.",
+        },
+      ],
+      "readingFields": Array [
+        Object {
+          "description": "ID of this particular achievement.",
+          "name": "id",
+          "type": Object {
+            "object": null,
+            "scalar": "string",
+          },
+        },
+        Object {
+          "description": "The user who achieved this.",
+          "name": "from",
+          "type": Object {
+            "object": Object {
+              "link": "https://developers.facebook.com/docs/graph-api/reference/user/",
+              "title": "User",
+            },
+            "scalar": "User",
+          },
+        },
+        Object {
+          "description": "Time at which this was achieved.",
+          "name": "publish_time",
+          "type": Object {
+            "object": null,
+            "scalar": "datetime",
+          },
+        },
+        Object {
+          "description": "The app in which the user achieved this.",
+          "name": "application",
+          "type": Object {
+            "object": Object {
+              "link": "https://developers.facebook.com/docs/graph-api/reference/app/",
+              "title": "App",
+            },
+            "scalar": "App",
+          },
+        },
+        Object {
+          "description": "Information about the achievement type this instance is connected with.",
+          "name": "data",
+          "type": Object {
+            "object": null,
+            "scalar": "object",
+          },
+        },
+        Object {
+          "description": "The achievement type that the user achieved.",
+          "name": "achievement",
+          "type": Object {
+            "object": Object {
+              "link": "https://developers.facebook.com/docs/graph-api/reference/achievement_type/",
+              "title": "AchievementType",
+            },
+            "scalar": "AchievementType",
+          },
+        },
+        Object {
+          "description": "A weighting given to each achievement type by the app.",
+          "name": "importance",
+          "type": Object {
+            "object": null,
+            "scalar": "int",
+          },
+        },
+        Object {
+          "description": "Always game.achievement.",
+          "name": "type",
+          "type": Object {
+            "object": null,
+            "scalar": "string",
+          },
+        },
+        Object {
+          "description": "Indicates whether gaining the achievement published a feed story for the user.",
+          "name": "no_feed_story",
+          "type": Object {
+            "object": null,
+            "scalar": "boolean",
+          },
+        },
+      ],
+      "readingPermissions": Array [
+        "An app access token for any achievements made through that app.",
+        "A user access token for any achievements made through the requesting app by that user.",
+        "A user access token with user_games_activity permission, for any achievements that person has made in any app. ",
+      ],
+    },
+    "description": "Represents a person gaining a game achievement",
+    "link": "https://developers.facebook.com/docs/graph-api/reference/achievement",
+    "name": "achievement",
+    "title": "Achievement",
+  },
+  Object {
+    "data": Object {
+      "description": "A games achievement type created by a Facebook App. Not to be confused with /docs/reference/api/achievement,an instance of an achievement.",
+      "edges": Array [],
+      "readingFields": Array [],
+      "readingPermissions": Array [
+        "An app access token is required to view any achievement type created by that app.",
+      ],
+    },
+    "description": "A games achievement type",
+    "link": "https://developers.facebook.com/docs/graph-api/reference/achievement_type",
+    "name": "achievement_type",
+    "title": "Achievement Type",
+  },
+]
+`;

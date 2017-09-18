@@ -10,7 +10,8 @@ var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, ge
 Object.defineProperty(exports, "__esModule", { value: true });
 const node_list_1 = require("./node-list");
 const node_page_1 = require("./node-page");
-exports.getAllNodes = () => () => __awaiter(this, void 0, void 0, function* () {
-    const nodes = yield node_list_1.default();
-    nodes.map(() => node_page_1.default());
+exports.GetAllNodes = ({ getNode = node_page_1.default, getNodeList = node_list_1.default }) => () => __awaiter(this, void 0, void 0, function* () {
+    const nodes = yield getNodeList();
+    return yield Promise.all(nodes.map((n) => __awaiter(this, void 0, void 0, function* () { return (Object.assign({}, n, { data: yield getNode(n.name) })); })));
 });
+exports.default = exports.GetAllNodes({});
