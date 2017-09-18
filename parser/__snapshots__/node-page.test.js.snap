@@ -1,0 +1,88 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`get node 1`] = `
+Object {
+  "description": "Represents a user gaining an achievement in a Facebook game. Not to be confused with an /docs/graph-api/reference/achievement_type/,achievement type.",
+  "edges": Array [
+    Object {
+      "link": "https://developers.facebook.com/docs/graph-api/reference/object/comments/",
+      "title": "omments on the achievement story.",
+    },
+  ],
+  "readingPermissions": Array [
+    "An app access token for any achievements made through that app.",
+    "A user access token for any achievements made through the requesting app by that user.",
+    "A user access token with user_games_activity permission, for any achievements that person has made in any app. ",
+  ],
+}
+`;
+
+exports[`grab from real html 1`] = `
+Object {
+  "raw": Object {
+    "description": "Represents a user gaining an achievement in a Facebook game. Not to be confused with an <a href=\\"/docs/graph-api/reference/achievement_type/\\">achievement type</a>.",
+    "edges": Array [
+      Object {
+        "description": "Comments on the achievement story.",
+        "name": Object {
+          "href": "/docs/graph-api/reference/object/comments/",
+          "title": "/comments",
+        },
+      },
+    ],
+    "fields": Array [
+      Object {
+        "description": "ID of this particular achievement.",
+        "name": "<code>id</code>",
+        "type": "<code>string</code>",
+      },
+      Object {
+        "description": "The user who achieved this.",
+        "name": "<code>from</code>",
+        "type": "<a href=\\"/docs/graph-api/reference/user/\\"><code>User</code></a>",
+      },
+      Object {
+        "description": "Time at which this was achieved.",
+        "name": "<code>publish_time</code>",
+        "type": "<code>datetime</code>",
+      },
+      Object {
+        "description": "The app in which the user achieved this.",
+        "name": "<code>application</code>",
+        "type": "<a href=\\"/docs/graph-api/reference/app/\\"><code>App</code></a>",
+      },
+      Object {
+        "description": "Information about the achievement type this instance is connected with.",
+        "name": "<code>data</code>",
+        "type": "<code>object</code>",
+      },
+      Object {
+        "description": "The achievement type that the user achieved.",
+        "name": "<code>achievement</code>",
+        "type": "<a href=\\"/docs/graph-api/reference/achievement_type/\\"><code>AchievementType</code></a>",
+      },
+      Object {
+        "description": "A weighting given to each achievement type by the app.",
+        "name": "<code>importance</code>",
+        "type": "<code>int</code>",
+      },
+      Object {
+        "description": "Always <code>game.achievement</code>.",
+        "name": "<code>type</code>",
+        "type": "<code>string</code>",
+      },
+      Object {
+        "description": "Indicates whether gaining the achievement published a feed story for the user.",
+        "name": "<code>no_feed_story</code>",
+        "type": "<code>boolean</code>",
+      },
+    ],
+    "readingPermissions": Array [
+      "An app access token for any achievements made through that app.",
+      "A user access token for any achievements made through the requesting app by that user.",
+      "A user access token with <code>user_games_activity</code> permission, for any achievements that person has made in any app. ",
+    ],
+  },
+  "url": "https://developers.facebook.com/docs/graph-api/reference/v2.10/achivement",
+}
+`;

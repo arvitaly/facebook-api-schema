@@ -1,0 +1,36 @@
+{
+  "name": "fb-api-schema",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "tsc && tslint --project tsconfig.json && jest --verbose --coverage",
+    "watch:test": "jest --watch"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/arvitaly/fb-api-schema.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/arvitaly/fb-api-schema/issues"
+  },
+  "homepage": "https://github.com/arvitaly/fb-api-schema#readme",
+  "devDependencies": {
+    "@types/express": "^4.0.37",
+    "@types/jest": "^20.0.8",
+    "coveralls": "^2.13.1",
+    "express": "^4.15.4",
+    "jest": "^21.1.0",
+    "tslint": "^5.7.0",
+    "typescript": "^2.5.2",
+    "webgrab": "^0.0.2"
+  },
+  "jest": {},
+  "dependencies": {
+    "freeport-es6": "^0.0.1",
+    "jest-fetch-mock": "^1.2.1"
+  }
+}
